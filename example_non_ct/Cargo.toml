@@ -1,0 +1,8 @@
+[package]
+name = "example_non_ct"
+version = "0.1.0"
+authors = ["phayes <patrick.d.hayes@gmail.com>"]
+edition = "2018"
+
+[dependencies]
+sidefuzz = {git = "https://github.com/phayes/sidefuzz"}
