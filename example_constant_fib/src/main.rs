@@ -3,7 +3,7 @@ fn main() {
 
     pub fn fibonacci(n: u8) -> f64 {
         if n == 0 {
-            panic!("zero is not a right argument to fibonacci()!");
+            return 0.0;
         } else if n == 1 {
             return 1.0;
         }
@@ -19,15 +19,11 @@ fn main() {
         sum
     }
 
-    let fuzzer = sidefuzz::SideFuzz::new(1, |message: &[u8]| {
-        if message[0] == 0u8 {
-            return Err(());
-        }
-
+    let fuzzer = sidefuzz::SideFuzz::new(1, #[inline(never)]
+    |_message: &[u8]| {
         // Ignore message input and just pass 255 all the time.
         // this is DEFINITELTY constant time in relation to input
         sidefuzz::black_box(fibonacci(255u8));
-        Ok(())
     });
 
     fuzzer.run();

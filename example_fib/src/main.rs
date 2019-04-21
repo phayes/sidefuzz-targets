@@ -1,9 +1,7 @@
 fn main() {
     pub fn fibonacci(n: u8) -> f64 {
-        if n < 0 {
-            panic!("{} is negative!", n);
-        } else if n == 0 {
-            panic!("zero is not a right argument to fibonacci()!");
+        if n == 0 {
+            return 0.0;
         } else if n == 1 {
             return 1.0;
         }
@@ -19,12 +17,8 @@ fn main() {
         sum
     }
 
-    let fuzzer = sidefuzz::SideFuzz::new(1, |message: &[u8]| {
-        if message[0] == 0u8 {
-            return Err(());
-        }
+    let fuzzer = sidefuzz::SideFuzz::new(1, #[inline(never)] |message: &[u8]| {
         sidefuzz::black_box(fibonacci(message[0]));
-        Ok(())
     });
 
     fuzzer.run();
