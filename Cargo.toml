@@ -1,10 +1,8 @@
 [workspace]
-
 members = [
-    "ed25519_dalek_sign_message",
     "subtle_ct_eq",
     "example_fib",
     "example_constant_fib",
     "example_non_ct",
-    "rsa_encrypt_message",
+    "rsa_encrypt_message"
 ]
