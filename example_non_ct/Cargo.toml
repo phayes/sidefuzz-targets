@@ -8,4 +8,4 @@ edition = "2018"
 crate-type = ["cdylib"]
 
 [dependencies]
-sidefuzz = {git = "https://github.com/phayes/sidefuzz"}
+sidefuzz = "0.1.1"
