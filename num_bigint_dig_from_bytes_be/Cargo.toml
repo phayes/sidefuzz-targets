@@ -1,5 +1,5 @@
 [package]
-name = "rsa_encrypt_message"
+name = "num_bigint_dig_from_bytes_be"
 version = "0.1.0"
 authors = ["phayes <patrick.d.hayes@gmail.com>"]
 edition = "2018"
@@ -9,7 +9,4 @@ crate-type = ["cdylib"]
 
 [dependencies]
 sidefuzz = {git = "https://github.com/phayes/sidefuzz"}
-rsa = {version ="0.1.3", features = ["expose-internals"]}
-rand = "0.5.6"
-lazy_static = "1.3.0"
 num-bigint-dig = "0.4.0"

@@ -1,15 +1,7 @@
-use sidefuzz::black_box;
-use std::slice;
-
 #[no_mangle]
-pub extern "C" fn len() -> i32 {
-    return 1;
-}
-
-#[no_mangle]
-pub extern "C" fn sidefuzz(ptr: i32, len: i32) {
-    let input: &[u8] = unsafe { slice::from_raw_parts(ptr as _, len as _) };
-    black_box(fibonacci(input[0]));
+pub extern "C" fn fuzz() {
+    let input = sidefuzz::fetch_input(1);
+    sidefuzz::black_box(fibonacci(input[0]));
 }
 
 pub fn fibonacci(n: u8) -> f64 {

@@ -1,8 +1,6 @@
 use lazy_static::*;
-
-use num_bigint_dig::BigUint;
 use rand::chacha::ChaChaRng;
-use rsa::{RSAPrivateKey, RSAPublicKey};
+use rsa::{PaddingScheme, PublicKey, RSAPrivateKey};
 
 lazy_static! {
     static ref KEY: RSAPrivateKey = {
@@ -15,8 +13,12 @@ lazy_static! {
 #[no_mangle]
 pub extern "C" fn fuzz() {
     let input = sidefuzz::fetch_input(16);
-    let c = BigUint::from_bytes_be(input);
 
-    let key: RSAPublicKey = KEY.clone().into();
-    sidefuzz::black_box(rsa::internals::encrypt(&key, &c));
+    #[allow(deprecated)]
+    let mut rng = ChaChaRng::new_unseeded();
+
+    sidefuzz::black_box(
+        KEY.encrypt(&mut rng, PaddingScheme::PKCS1v15, input)
+            .unwrap(),
+    );
 }
