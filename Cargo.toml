@@ -2,7 +2,6 @@
 members = [
     "subtle_ct_eq",
     "example_fib",
-    "example_constant_fib",
     "example_non_ct",
     "ed25519_dalek_sign_message",
     "rsa_encrypt_message",
@@ -10,11 +9,3 @@ members = [
     "orion_poly1305",
     "orion_secure_cmp",
 ]
-
-
-# TODO: opt-profile = 3 tends to produce lots of variable-time code. 
-# I'm not sure if this is due to variable-time code in the targets or in SideFuzz,
-# so for now set the opt-level to 2. 
-
-[profile.release]
-opt-level = 2

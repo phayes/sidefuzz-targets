@@ -4,6 +4,9 @@ version = "0.1.0"
 authors = ["phayes <patrick.d.hayes@gmail.com>"]
 edition = "2018"
 
+[lib]
+crate-type = ["cdylib"]
+
 [dependencies]
-sidefuzz = {git = "https://github.com/phayes/sidefuzz"}
+sidefuzz = "0.1.1"
 subtle = "2.0.0"
