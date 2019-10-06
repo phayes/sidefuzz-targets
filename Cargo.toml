@@ -3,9 +3,10 @@ members = [
     "subtle_ct_eq",
     "example_fib",
     "example_non_ct",
-    "ed25519_dalek_sign_message",
+    "rsa_encrypt_pkcs1v15_message",
     "rsa_encrypt_message",
+    "num_bigint_dig_from_bytes_be",
     "orion_partial_eq",
     "orion_poly1305",
-    "orion_secure_cmp",
+    "orion_secure_cmp"
 ]
