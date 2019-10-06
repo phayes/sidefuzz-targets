@@ -1,0 +1,13 @@
+[package]
+name = "orion_secure_cmp"
+version = "0.1.0"
+authors = ["brycx <brycx@protonmail.com>"]
+edition = "2018"
+
+
+[lib]
+crate-type = ["cdylib"]
+
+[dependencies]
+sidefuzz = "0.1.2"
+orion = { git = "https://github.com/brycx/orion/", branch = "master" }
