@@ -1,5 +1,6 @@
 [workspace]
 members = [
+    "blake3_hash_input",
     "subtle_ct_eq",
     "example_fib",
     "example_non_ct",
