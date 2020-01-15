@@ -1,10 +1,15 @@
 [workspace]
 members = [
     "blake3_hash_input",
+    "blake3_reference_impl",
+    "blake3_keyed_hash_input",
+    "blake3_keyed_hash_key",
+    "blake3_derive_key_context",
+    "blake3_derive_key_key_material",
     "subtle_ct_eq",
     "example_fib",
     "example_non_ct",
     "rsa_encrypt_pkcs1v15_message",
     "rsa_encrypt_message",
     "num_bigint_dig_from_bytes_be"
-]
+] 

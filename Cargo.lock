@@ -66,10 +66,50 @@ dependencies = [
 ]
 
 [[package]]
+name = "blake3_derive_key_context"
+version = "0.1.0"
+dependencies = [
+ "blake3",
+ "sidefuzz",
+]
+
+[[package]]
+name = "blake3_derive_key_key_material"
+version = "0.1.0"
+dependencies = [
+ "blake3",
+ "sidefuzz",
+]
+
+[[package]]
 name = "blake3_hash_input"
 version = "0.1.0"
 dependencies = [
  "blake3",
+ "sidefuzz",
+]
+
+[[package]]
+name = "blake3_keyed_hash_input"
+version = "0.1.0"
+dependencies = [
+ "blake3",
+ "sidefuzz",
+]
+
+[[package]]
+name = "blake3_keyed_hash_key"
+version = "0.1.0"
+dependencies = [
+ "blake3",
+ "sidefuzz",
+]
+
+[[package]]
+name = "blake3_reference_impl"
+version = "0.1.0"
+dependencies = [
+ "reference_impl",
  "sidefuzz",
 ]
 
@@ -446,6 +486,11 @@ checksum = "678054eb77286b51581ba43620cc911abf02758c91f93f479767aed0f90458b2"
 dependencies = [
  "rand_core 0.3.1",
 ]
+
+[[package]]
+name = "reference_impl"
+version = "0.0.0"
+source = "git+https://github.com/BLAKE3-team/BLAKE3#33a9bee51fb8d03e9dbb0c39860457ad6d8dd428"
 
 [[package]]
 name = "rsa"
