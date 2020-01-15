@@ -1,13 +1,13 @@
 use lazy_static::*;
-
 use num_bigint_dig::BigUint;
-use rand::chacha::ChaChaRng;
+use rand_chacha::rand_core::SeedableRng;
+use rand_chacha::ChaChaRng;
 use rsa::{RSAPrivateKey, RSAPublicKey};
 
 lazy_static! {
     static ref KEY: RSAPrivateKey = {
         #[allow(deprecated)]
-        let mut rng = ChaChaRng::new_unseeded();
+        let mut rng = ChaChaRng::from_seed([0; 32]);
         RSAPrivateKey::new(&mut rng, 256).unwrap()
     };
 }
