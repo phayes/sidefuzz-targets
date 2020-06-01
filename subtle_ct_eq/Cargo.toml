@@ -9,4 +9,4 @@ crate-type = ["cdylib"]
 
 [dependencies]
 sidefuzz = "0.1.1"
-subtle = "2.0.0"
+subtle = "2.2.3"
