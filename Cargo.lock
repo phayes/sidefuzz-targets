@@ -490,7 +490,7 @@ dependencies = [
 [[package]]
 name = "reference_impl"
 version = "0.0.0"
-source = "git+https://github.com/BLAKE3-team/BLAKE3#33a9bee51fb8d03e9dbb0c39860457ad6d8dd428"
+source = "git+https://github.com/BLAKE3-team/BLAKE3#e83cbbb8f5b4b05275ec02d50921ce7be73ab523"
 
 [[package]]
 name = "rsa"
