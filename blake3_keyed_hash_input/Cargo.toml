@@ -9,4 +9,4 @@ crate-type = ["cdylib"]
 
 [dependencies]
 sidefuzz = "0.1.2"
-blake3 = "0.1.1"
+blake3 = "0.3.6"
