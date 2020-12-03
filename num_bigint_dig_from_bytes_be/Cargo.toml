@@ -9,4 +9,4 @@ crate-type = ["cdylib"]
 
 [dependencies]
 sidefuzz = "0.1.1"
-num-bigint-dig = "0.4.0"
+num-bigint-dig = "0.6.1"
