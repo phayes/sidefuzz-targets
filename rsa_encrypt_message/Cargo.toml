@@ -12,4 +12,4 @@ sidefuzz = "0.1.2"
 rsa = {version ="0.2.0", features = ["expose-internals"]}
 rand_chacha = "0.2.1"
 lazy_static = "1.4.0"
-num-bigint-dig = "0.6.0"
+num-bigint-dig = "0.7.0"
