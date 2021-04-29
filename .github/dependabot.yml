@@ -1,0 +1,15 @@
+version: 2
+updates:
+- package-ecosystem: cargo
+  directory: "/"
+  schedule:
+    interval: daily
+    time: "13:00"
+  open-pull-requests-limit: 10
+  ignore:
+  - dependency-name: num-bigint-dig
+    versions:
+    - 0.6.1
+  - dependency-name: rsa
+    versions:
+    - 0.3.0
